@@ -18,7 +18,17 @@ def Escolhercaminho():
 
   if (contadorDeTentativas == 7):
     perdeu = True
+    
+    if (SalaAtual == 6 and caminhoEscolhido == 1):
+        SalaAtual = 5
+        print("Nao eh possivel sair dessa sala por esse caminho")
 
+    if (caminhoEscolhido == 1):
+        SalaAtual+= 1
+    elif (caminhoEscolhido == 2):
+        SalaAtual += 2
+    else:
+        print("Erro nao existe esse caminho")
   
 
 while (salaAtual < 9 and not(perdeu)):
