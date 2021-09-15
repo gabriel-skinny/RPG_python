@@ -7,33 +7,19 @@ perdeu = False
 jogo = True
 personagem = 0
 
-def PegarInputs(tipo):
-  if (tipo == "personagem"):
-    print("\033[1;34mEscolha o seu personagem\n")
-    print("[1] - Guerreiro")
-    print("[2] - Arqueiro ")
-    print("[3] - Ladingo")
-    print("[4] - Mago \n ")
-
-    return int(input())
-
-  elif (tipo == "caminho"):
-    print("\033[1;34m\nVoce esta na sala {}".format(salaAtual))
-    print("Escolha seu caminho:")
-    print("[1] - Caminho Vermelho")
-    print("[2] - Caminho Preto\n")
-
-    return int(input())
-
-  else:
-    print("ERROR!!")
-
 def EscolherPersonagem():
   global personagem
   global jogo
   global perdeu
   
-  personagem = PegarInputs("personagem")
+  print("\033[1;34mEscolha o seu personagem\n")
+  print("[1] - Guerreiro")
+  print("[2] - Arqueiro ")
+  print("[3] - Ladingo")
+  print("[4] - Mago \n ")
+  personagem = int(input())
+
+  print("\033[1;33m\n\nVOCE ENTROU NA DUNGEON\n")
 
   if (personagem > 4 or personagem < 1):
     print("\n\n\nERROR NAO EXISTE ESSE PERSONAGEM QUE FOI DIGITADO!!\n")
@@ -65,7 +51,12 @@ def Escolhercaminho():
   global jogo
   global personagem
 
-  caminhoEscolhido = PegarInputs("caminho")
+  print("\033[1;34m\nVoce esta na sala {}".format(salaAtual))
+  print("Escolha seu caminho:\n")
+  print("[1] - Caminho Vermelho")
+  print("[2] - Caminho Preto\n")
+
+  caminhoEscolhido = int(input())
   
   if (salaAtual == 6 and caminhoEscolhido == 1):
     salaAtual-=caminhoEscolhido
