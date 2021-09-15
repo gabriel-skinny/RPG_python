@@ -13,10 +13,13 @@
   No começo do jogo voce escolhe o seu personagem, cada personagem possui uma sala especifica que tem uma dica que pode ajuda-lo a sair da dungeon.
   Para guiar sua guilda você devera escolher entre o caminho vermelho e preto. Para completar o desafio voce devera apenas escolher 7 caminhos caso o contrario voce tera perdido.
   
-## :computer: Como usar no seu computador
+## :information_source: Como usar no seu computador
 
   - Instale o compilador do [python](https://www.python.org/downloads/) no seu computador
   - Clone o repositorio com o comando `git clone https://github.com/gabriel-skinny/RPG_python.git`
   - Acesse a pasta do repositorio e digite o comando `python script.py` e o jogo ira rodar no seu terminal 
   
+## :computer: Preview 
+
+![Demo CountPages alpha](/preview.gif)
     
