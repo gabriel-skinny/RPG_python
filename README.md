@@ -5,6 +5,7 @@
   - gabriel-skinny: Gabriel Vasconcelos Catoni
   - RogerCara123: Roger Alves de Cara
   - AnthonyYan021: Anthony Yan Correia de Oliveira
+  - FernandoVidal1: Fernando Vidal Claudino Bento
 
 ## Como jogar?
 
