@@ -1,4 +1,6 @@
 # Escrever o codigo aqui
+import random
+
 salaAtual = 1
 contadorDeTentativas = 0
 perdeu = False
@@ -19,21 +21,21 @@ def Escolhercaminho():
   if (contadorDeTentativas == 7):
     perdeu = True
     
-    if (SalaAtual == 6 and caminhoEscolhido == 1):
-        SalaAtual = 5
+    if (salaAtual == 6 and caminhoEscolhido == 1):
+        salaAtual = 5
         print("Nao eh possivel sair dessa sala por esse caminho")
 
     if (caminhoEscolhido == 1):
-        SalaAtual+= 1
+        salaAtual+= 1
     elif (caminhoEscolhido == 2):
-        SalaAtual += 2
+        salaAtual += 2
     else:
         print("Erro nao existe esse caminho")
         
-    if (SalaAtual == 8):
+    if (salaAtual == 8):
       print("Voce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
-      SalaAtual = random.randint(1, 5)
-      print("Voce retornou para a sala {}".format(SalaAtual))
+      salaAtual = random.randint(1, 5)
+      print("Voce retornou para a sala {}".format(salaAtual))
   
 while (salaAtual < 9 and not(perdeu)):
   Escolhercaminho()
