@@ -9,7 +9,7 @@ personagem = 0
 
 def PegarInputs(tipo):
   if (tipo == "personagem"):
-    print("Escolha o seu personagem")
+    print("\033[1;34mEscolha o seu personagem\n")
     print("[1] - Guerreiro")
     print("[2] - Arqueiro ")
     print("[3] - Ladingo")
@@ -18,7 +18,7 @@ def PegarInputs(tipo):
     return int(input())
 
   elif (tipo == "caminho"):
-    print("\nVoce esta na sala {}".format(salaAtual))
+    print("\033[1;34m\nVoce esta na sala {}".format(salaAtual))
     print("Escolha seu caminho:")
     print("[1] - Caminho Vermelho")
     print("[2] - Caminho Preto\n")
@@ -43,19 +43,19 @@ def EscolherPersonagem():
 
 def personagemDica(salaAtual, personagem):
   if (salaAtual == 5 and personagem == 1):
-      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\033[1;33m\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
       print("\nDica: o caminho vermelho leva a sala 7")
 
   if (salaAtual == 2 and personagem == 2):
-      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\033[1;33m\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
       print("\nDica: o caminho preto leva a sala 4")
 
   if (salaAtual == 4 and personagem == 3):
-      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\033[1;33m\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
       print("\nDica: o caminho preto leva a sala 6")
 
   if (salaAtual == 6  and personagem == 4):
-      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\033[1;33m\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
       print("\nDica: nesta sala eh apenas possivel usar o caminho preto")
 
 def Escolhercaminho():
@@ -66,6 +66,12 @@ def Escolhercaminho():
   global personagem
 
   caminhoEscolhido = PegarInputs("caminho")
+  
+  if (salaAtual == 6 and caminhoEscolhido == 1):
+    salaAtual-=caminhoEscolhido
+    print("\033[1;31m\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
+    return
+
   salaAtual+= caminhoEscolhido
 
   personagemDica(salaAtual, personagem)
@@ -75,13 +81,9 @@ def Escolhercaminho():
   if (contadorDeTentativas == 7):
     perdeu = True
     jogo = False
-
-  if (salaAtual == 6 and caminhoEscolhido == 1):
-    print("\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
-    return
         
   if (salaAtual == 8):
-    print("Voce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
+    print("\033[1;33m\nVoce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
     salaAtual = random.randint(1, 5)
     print("Voce retornou para a sala {}".format(salaAtual))
 
@@ -94,7 +96,7 @@ while(jogo):
   else:
     jogo = False
 
-    if perdeu: print("\n\n\nO limite de tentativas eram 7 vc usou um total de {} tentativa. VOCE PERDEU! \n \n \n \n".format(contadorDeTentativas))
-    else:  print("\n\nVoce conseguiu sair da dungeon com apenas {} tentativas \n \n \n \n".format(contadorDeTentativas)) 
+    if perdeu: print("\033[1;31m\n\n\nO limite de tentativas eram 7. VOCE PERDEU! \n \n \n \n".format(contadorDeTentativas))
+    else:  print("\033[1;32m\n\nVoce conseguiu sair da dungeon com apenas {} tentativas \n \n \n \n".format(contadorDeTentativas)) 
 else: 
-  print("O JOGO ACABOU!!\n")
+  print("\033[1;33mO JOGO ACABOU!!\n")
