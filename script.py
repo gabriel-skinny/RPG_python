@@ -53,6 +53,7 @@ def Escolhercaminho():
 
   if (contadorDeTentativas == 7):
     perdeu = True
+    jogo = False
     
   if (salaAtual == 6 and caminhoEscolhido == 1):
     print("\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
@@ -77,6 +78,8 @@ while(jogo):
   while (salaAtual < 9 and not(perdeu) and jogo):
     Escolhercaminho()
   else:
+    jogo = False
+    
     if perdeu: print("\n\n\nO limite de tentativas eram 7 vc usou um total de {} tentativa. VOCE PERDEU! \n \n \n \n".format(contadorDeTentativas))
     else:  print("\n\nVoce conseguiu sair da dungeon com apenas {} tentativas \n \n \n \n".format(contadorDeTentativas)) 
 else: 
