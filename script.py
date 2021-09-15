@@ -10,10 +10,10 @@ def Escolhercaminho():
   global contadorDeTentativas
   global perdeu
 
-  print("Voce esta na sala {}".format(salaAtual))
+  print("\nVoce esta na sala {}".format(salaAtual))
   print("Escolha seu caminho:")
   print("[1] - Caminho Vermelho")
-  print("[2] - Caminho Preto")
+  print("[2] - Caminho Preto\n")
   caminhoEscolhido = int(input())
 
   contadorDeTentativas += 1
