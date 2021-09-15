@@ -21,21 +21,21 @@ def Escolhercaminho():
   if (contadorDeTentativas == 7):
     perdeu = True
     
-    if (salaAtual == 6 and caminhoEscolhido == 1):
-        print("\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
-        return
+  if (salaAtual == 6 and caminhoEscolhido == 1):
+    print("\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
+    return
 
-    if (caminhoEscolhido == 1):
-        salaAtual+= 1
-    elif (caminhoEscolhido == 2):
-        salaAtual += 2
-    else:
-        print("Erro nao existe esse caminho")
+  if (caminhoEscolhido == 1):
+      salaAtual+= 1
+  elif (caminhoEscolhido == 2):
+      salaAtual += 2
+  else:
+      print("Erro nao existe esse caminho")
         
-    if (salaAtual == 8):
-      print("Voce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
-      salaAtual = random.randint(1, 5)
-      print("Voce retornou para a sala {}".format(salaAtual))
+  if (salaAtual == 8):
+    print("Voce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
+    salaAtual = random.randint(1, 5)
+    print("Voce retornou para a sala {}".format(salaAtual))
   
 while (salaAtual < 9 and not(perdeu)):
   Escolhercaminho()
