@@ -22,8 +22,8 @@ def Escolhercaminho():
     perdeu = True
     
     if (salaAtual == 6 and caminhoEscolhido == 1):
-        salaAtual = 5
-        print("Nao eh possivel sair dessa sala por esse caminho")
+        print("\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
+        return
 
     if (caminhoEscolhido == 1):
         salaAtual+= 1
