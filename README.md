@@ -7,7 +7,7 @@
   - AnthonyYan021: Anthony Yan Correia de Oliveira
   - FernandoVidal1: Fernando Vidal Claudino Bento
 
-## :video_game: Objetivo do jogo
+## :video_game: :pencil: Sobre o jogo
 
   Voce ira escolher somente entre dois caminhos, o vermelho e o preto. O seu objetivo é sair da dungeon com menos de 7 tentativas. A dungeon possui diversas armadilhas que podem dificultar ainda mais o seu caminho. 
   
