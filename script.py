@@ -4,6 +4,27 @@ import random
 salaAtual = 1
 contadorDeTentativas = 0
 perdeu = False
+jogo = True
+personagem = 0
+
+def EscolherPersonagem():
+  global personagem
+  global jogo
+  global perdeu
+  
+  print("Escolha o seu personagem")
+  print("[1] - Guerreiro")
+  print("[2] - Arqueiro ")
+  print("[3] - Ladingo")
+  print("[4] - Mago \n ")
+
+  personagem = int(input())
+
+  if (personagem > 4 or personagem < 1):
+    print("\n\n\nERROR NAO EXISTE ESSE PERSONAGEM QUE FOI DIGITADO!!\n")
+    jogo = False
+    perdeu = True
+    return
 
 def Escolhercaminho():
   global salaAtual
@@ -36,9 +57,15 @@ def Escolhercaminho():
     print("Voce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
     salaAtual = random.randint(1, 5)
     print("Voce retornou para a sala {}".format(salaAtual))
-  
-while (salaAtual < 9 and not(perdeu)):
-  Escolhercaminho()
-else:
-  if perdeu: print("\n\n\nO limite de tentativas eram 7 vc usou um total de {} tentativa. VOCE PERDEU! \n \n \n \n".format(contadorDeTentativas))
-  else:  print("\n\n\nVoce conseguiu sair da dungeon com apenas {} tentativas \n \n \n \n".format(contadorDeTentativas)) 
+
+
+while(jogo):
+  EscolherPersonagem()
+
+  while (salaAtual < 9 and not(perdeu) and jogo):
+    Escolhercaminho()
+  else:
+    if perdeu: print("\n\n\nO limite de tentativas eram 7 vc usou um total de {} tentativa. VOCE PERDEU! \n \n \n \n".format(contadorDeTentativas))
+    else:  print("\n\nVoce conseguiu sair da dungeon com apenas {} tentativas \n \n \n \n".format(contadorDeTentativas)) 
+else: 
+  print("O JOGO ACABOU!!\n")
