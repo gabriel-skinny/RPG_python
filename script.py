@@ -41,30 +41,44 @@ def EscolherPersonagem():
     perdeu = True
     return
 
+def personagemDica(salaAtual, personagem):
+  if (salaAtual == 5 and personagem == 1):
+      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\nDica: o caminho vermelho leva a sala 7")
+
+  if (salaAtual == 2 and personagem == 2):
+      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\nDica: o caminho preto leva a sala 4")
+
+  if (salaAtual == 4 and personagem == 3):
+      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\nDica: o caminho preto leva a sala 6")
+
+  if (salaAtual == 6  and personagem == 4):
+      print("\n\nVoce encontrou uma pedra que somente o seu personagem consegue ler e nela esta escrita uma dica")
+      print("\nDica: nesta sala eh apenas possivel usar o caminho preto")
+
 def Escolhercaminho():
   global salaAtual
   global contadorDeTentativas
   global perdeu
   global jogo
+  global personagem
 
   caminhoEscolhido = PegarInputs("caminho")
+  salaAtual+= caminhoEscolhido
+
+  personagemDica(salaAtual, personagem)
 
   contadorDeTentativas += 1
 
   if (contadorDeTentativas == 7):
     perdeu = True
     jogo = False
-    
+
   if (salaAtual == 6 and caminhoEscolhido == 1):
     print("\nNAO EH POSSIVEL SAIR DA SALA POR ESSE CAMINHO!!!!")
     return
-
-  if (caminhoEscolhido == 1):
-      salaAtual+= 1
-  elif (caminhoEscolhido == 2):
-      salaAtual += 2
-  else:
-      print("Erro nao existe esse caminho")
         
   if (salaAtual == 8):
     print("Voce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
@@ -79,7 +93,7 @@ while(jogo):
     Escolhercaminho()
   else:
     jogo = False
-    
+
     if perdeu: print("\n\n\nO limite de tentativas eram 7 vc usou um total de {} tentativa. VOCE PERDEU! \n \n \n \n".format(contadorDeTentativas))
     else:  print("\n\nVoce conseguiu sair da dungeon com apenas {} tentativas \n \n \n \n".format(contadorDeTentativas)) 
 else: 
