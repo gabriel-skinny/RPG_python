@@ -9,9 +9,9 @@
 
 ## :video_game: Sobre o jogo
 
-  O seu objetivo é guiar sua guilda a sair da dangeon. Dentro da dangeon possui varias salas e cada salas podem conter armadilhas ou dicas. 
+  O seu objetivo é guiar sua guilda a sair da dungeon. A dungeon possui varias salas e cada salas podem conter armadilhas ou dicas. 
   No começo do jogo voce escolhe o seu personagem, cada personagem possui uma sala especifica que tem uma dica que pode ajuda-lo a sair da dungeon.
-  Para guiar sua guilda você devera escolher entre o caminho vermelho e preto. Para sair da dungeon voce devera apenas escolher 7 caminhos caso o contrario voce tera perdido.
+  Para guiar sua guilda você devera escolher entre o caminho vermelho e preto. Para completar o desafio voce devera apenas escolher 7 caminhos caso o contrario voce tera perdido.
   
 ## :computer: Como usar no seu computador
 
