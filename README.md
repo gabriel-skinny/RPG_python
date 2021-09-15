@@ -21,5 +21,5 @@
   
 ## :computer: Preview 
 
-![Demo CountPages alpha](/preview.gif)
+![Demo CountPages alpha](/previewVideo.gif)
     
