@@ -73,7 +73,7 @@ def Escolhercaminho():
     perdeu = True
     jogo = False
         
-  if (salaAtual == 8):
+  if (salaAtual == 10):
     print("\033[1;33m\nVoce caiu em um portal portanto voce vai retornar para uma sala aleatoria")
     salaAtual = random.randint(1, 5)
     print("Voce retornou para a sala {}".format(salaAtual))
