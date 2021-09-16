@@ -78,7 +78,6 @@ def Escolhercaminho():
     salaAtual = random.randint(1, 5)
     print("Voce retornou para a sala {}".format(salaAtual))
 
-
 while(jogo):
   EscolherPersonagem()
 
