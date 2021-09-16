@@ -6,6 +6,7 @@
   - RogerCara123: Roger Alves de Cara
   - AnthonyYan021: Anthony Yan Correia de Oliveira
   - FernandoVidal1: Fernando Vidal Claudino Bento
+  - Mary Franca: Mariana Soares de Jesus Franca
 
 ## :video_game: Sobre o jogo
 
