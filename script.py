@@ -1,5 +1,5 @@
 # Escrever o codigo aqui
-import random
+importar random
 
 salaAtual = 1
 contadorDeTentativas = 0
